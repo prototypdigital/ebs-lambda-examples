@@ -26,7 +26,7 @@ resource "aws_iam_access_key" "this" {
 }
 
 # Create IAM user login profile
-resource "aws_iam_user_login_profile" "dashboard" {
+resource "aws_iam_user_login_profile" "this" {
   user = aws_iam_user.this.name
 
   #   Fix for issue with password reset by user recreating user: https://github.com/hashicorp/terraform-provider-aws/issues/23567

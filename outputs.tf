@@ -25,7 +25,7 @@ output "aws_account_id" {
 }
 
 output "initial_password" {
-  value = aws_iam_user_login_profile.dashboard.password
+  value = aws_iam_user_login_profile.this.password
 }
 
 
