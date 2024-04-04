@@ -20,12 +20,6 @@ output "user_access_secret" {
   sensitive   = true
 }
 
-output "aws_account_id" {
-  value = data.aws_caller_identity.current.account_id
-}
-
 output "initial_password" {
-  value = aws_iam_user_login_profile.this.password
+  value = var.allow_console_access ? aws_iam_user_login_profile.dashboard[0].password : null
 }
-
-
