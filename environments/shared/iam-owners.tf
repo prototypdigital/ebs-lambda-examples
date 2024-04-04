@@ -16,3 +16,14 @@ module "josip_ravas_user" {
   allow_console_access = true
 }
 
+module "owners_user_group" {
+  source      = "../../modules/iam-user-group"
+  name        = "owners"
+  policy_arns = [module.superadmin_policy.arn]
+
+  members = [
+    module.terraform_user.user_name,
+    module.vlatko_vlahek_user.user_name,
+    module.josip_ravas_user.user_name,
+  ]
+}
