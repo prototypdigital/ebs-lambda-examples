@@ -8,3 +8,9 @@ output "user_credentials" {
   ]
 }
 
+
+output "vpc" {
+  description = "VPC"
+  value       = module.networking
+
+}
