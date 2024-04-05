@@ -12,5 +12,10 @@ output "user_credentials" {
 output "vpc" {
   description = "VPC"
   value       = module.networking
+}
 
+
+output "test" {
+  description = "value"
+  value       = "test"
 }
