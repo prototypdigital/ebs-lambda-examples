@@ -14,8 +14,3 @@ output "vpc" {
   value       = module.networking
 }
 
-
-output "test" {
-  description = "value"
-  value       = "test"
-}
