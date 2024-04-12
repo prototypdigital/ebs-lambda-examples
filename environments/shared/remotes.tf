@@ -1,10 +1,9 @@
 terraform {
   backend "remote" {
-    organization = "Pipi-Corp"
+    organization = "prototyp-dev"
 
     workspaces {
-      name = "shared"
+      name = "workshop-shared"
     }
   }
-
 }

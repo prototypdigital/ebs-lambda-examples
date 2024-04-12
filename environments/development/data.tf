@@ -2,9 +2,9 @@ data "terraform_remote_state" "shared" {
   backend = "remote"
 
   config = {
-    organization = "Pipi-Corp"
+    organization = "prototyp-dev"
     workspaces = {
-      name = "shared"
+      name = "workshop-shared"
     }
   }
 }
