@@ -38,7 +38,7 @@ resource "aws_cognito_user_pool" "users" {
   }
 
   schema {
-    name                = "ennaUserId"
+    name                = "userId"
     attribute_data_type = "String"
     required            = false
     mutable             = true

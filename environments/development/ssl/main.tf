@@ -16,4 +16,3 @@ module "ssl_api" {
   domain_name = "api.${var.domain_name}"
 }
 
-

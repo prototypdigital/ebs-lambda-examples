@@ -15,6 +15,6 @@ resource "aws_cognito_user_pool_client" "web_app" {
   allowed_oauth_flows_user_pool_client = true
   allowed_oauth_flows                  = ["code", "implicit"]
   allowed_oauth_scopes                 = ["email", "openid", "profile"]
-  read_attributes                      = ["email", "custom:ennaUserId", "custom:provider"]
-  write_attributes                     = ["email", "custom:ennaUserId", "custom:provider"]
+  read_attributes                      = ["email", "custom:userId", "custom:provider"]
+  write_attributes                     = ["email", "custom:userId", "custom:provider"]
 }

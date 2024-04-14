@@ -1,11 +1,11 @@
 resource "aws_cloudfront_origin_access_identity" "this" {
-  comment = "CloudFront Client Portal OAI for ${var.environment}"
+  comment = "CloudFront OAI for ${var.environment}"
 }
 
 resource "aws_cloudfront_distribution" "this" {
   enabled             = true
   is_ipv6_enabled     = true
-  comment             = "Enna Client Portal: ${title(var.environment)}"
+  comment             = "Workshop web app: ${title(var.environment)}"
   price_class         = "PriceClass_100"
   aliases             = [var.s3_bucket_domain_name]
   default_root_object = "index.html"
