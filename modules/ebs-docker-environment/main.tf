@@ -44,7 +44,8 @@ resource "aws_elastic_beanstalk_environment" "api" {
   application         = var.application_name
   solution_stack_name = data.aws_elastic_beanstalk_solution_stack.docker.name
   version_label       = aws_elastic_beanstalk_application_version.api_v1.name
-  tier                = "WebServer"
+
+  tier = "WebServer"
 
   setting {
     namespace = "aws:ec2:vpc"
@@ -81,19 +82,6 @@ resource "aws_elastic_beanstalk_environment" "api" {
     name      = "LoadBalancerType"
     value     = "application"
   }
-
-  setting {
-    namespace = "aws:elasticbeanstalk:environment"
-    name      = "LoadBalancerIsShared"
-    value     = "true"
-  }
-
-  # setting {
-  #   # Show available options for thi:
-  #   namespace = "aws:elbv2:loadbalancer"
-  #   name      = "SharedLoadBalancer"
-  #   value     = var.loadbalancer_arn
-  # }
 
   setting {
     namespace = "aws:elasticbeanstalk:application:environment"

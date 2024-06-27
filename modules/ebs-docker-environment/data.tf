@@ -3,13 +3,14 @@ data "aws_elastic_beanstalk_solution_stack" "docker" {
   name_regex  = "^(.*)Docker$"
 }
 
-data "aws_iam_role" "api" {
-  name = var.instance_profile_name
-}
+# data "aws_iam_role" "api" {
+#   name = var.instance_profile_name
+# }
 
 data "aws_iam_policy" "cognito_power_user" {
   name = "AmazonCognitoPowerUser"
 }
+
 data "archive_file" "config" {
   type        = "zip"
   output_path = "${path.module}/${var.environment}.zip"

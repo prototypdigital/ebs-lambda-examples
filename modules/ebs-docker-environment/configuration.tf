@@ -1,8 +1,8 @@
 resource "aws_s3_bucket" "api" {
-  bucket = local.resource_name
+  bucket = "${local.resource_name}-123"
 
   tags = {
-    Name        = local.resource_name
+    Name        = "${local.resource_name}-123"
     Environment = var.environment
   }
 }

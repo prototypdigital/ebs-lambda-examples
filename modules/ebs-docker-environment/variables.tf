@@ -82,3 +82,8 @@ variable "db_password" {
   description = "Database password"
   sensitive   = true
 }
+
+variable "docker_image_name" {
+  description = "Docker image name"
+  type        = string
+}
